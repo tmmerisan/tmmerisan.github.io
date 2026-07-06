@@ -12,11 +12,11 @@ theme = "PaperMod"
 
 [params.homeInfoParams]
   Title = "Tony's Tech Notes"
-  Content = "KBs y notas técnicas sobre Modern Workplace, Intune y Entra ID."
+  Content = "Knowledge bases and technical notes on Modern Workplace, Intune, and Entra ID."
 
 [[params.socialIcons]]
   name = "linkedin"
-  url = "https://www.linkedin.com/in/antonmerisan"
+  url = "https://www.linkedin.com/in/tonymerisan"
 
 [[params.socialIcons]]
   name = "github"
