@@ -1,0 +1,23 @@
+baseURL = "https://tonymerisan.github.io/"
+languageCode = "es-es"
+title = "Tony's Tech Notes"
+theme = "PaperMod"
+
+[params]
+  author = "Tony Merisan"
+  description = "Enterprise IT Engineer · Intune · Entra ID · Modern Workplace"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+[params.homeInfoParams]
+  Title = "Tony's Tech Notes"
+  Content = "KBs y notas técnicas sobre Modern Workplace, Intune y Entra ID."
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/antonmerisan"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/tmmerisan"
