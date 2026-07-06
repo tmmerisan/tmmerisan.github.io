@@ -137,6 +137,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Onelogon — Netlogon Vulnerable Channel Bypass
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. Summary A publicly disclosed technique, referred to as “Onelogon”, demonstrates a bypass of the Zerologon (CVE-2020-1472) remediation on Active Directory Domain Controllers. The bypass does not target a new flaw in the Netlogon Remote Protocol (MS-NRPC) itself — it targets legacy compatibility exceptions that administrators may have left enabled after the original Zerologon patch cycle (August 2020 – February 2021).
+Where these exceptions are present and misconfigured, an attacker can re-establish an unauthenticated or weakly authenticated Netlogon secure channel, impersonate a computer account, and in some documented cases escalate to full domain compromise (credential dumping via DCSync-style replication, extraction of NTDS.dit).
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-07-04 00:00:00 +0000 UTC'>4 de julio de 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>Tony Merisan</span></footer>
+  <a class="entry-link" aria-label="post link to Onelogon — Netlogon Vulnerable Channel Bypass" href="http://localhost:1313/posts/kb-004-onelogon-netlogon-vulnerable-channel-bypass/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">VPN FortiClient no conecta — Troubleshooting
     </h2>
   </header>
