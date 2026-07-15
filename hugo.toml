@@ -2,6 +2,7 @@ baseURL = "https://tonymerisan.com/"
 languageCode = "es-es"
 title = "Tony's Tech Notes"
 theme = "PaperMod"
+paginate = 20
 
 [params]
   author = "Tony Merisan"
