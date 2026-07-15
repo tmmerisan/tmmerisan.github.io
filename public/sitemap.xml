@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/active-directory/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/anydesk/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -50,13 +47,7 @@
     <loc>http://localhost:1313/tags/rmm-abuse/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/sigma/</loc>
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
@@ -64,6 +55,9 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/active-directory/</loc>
+    <lastmod>2026-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cve-2026-26128/</loc>
     <lastmod>2026-07-06T00:00:00+00:00</lastmod>
@@ -78,6 +72,9 @@
     <lastmod>2026-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/kb-005-ntlm-coercion-detection-mitigation/</loc>
+    <lastmod>2026-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2026-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/windows/</loc>

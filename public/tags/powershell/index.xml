@@ -16,13 +16,6 @@
       <description>32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&amp;#39;s how the attack works, how to detect it, and how to block it for free via Intune.</description>
     </item>
     <item>
-      <title>Stale Accounts &amp; Old Passwords in Active Directory — Audit &amp; Remediation</title>
-      <link>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</link>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</guid>
-      <description>Enabled accounts with passwords unchanged for years are one of the most common and exploited weaknesses in Active Directory. Here&amp;#39;s how to find them and what to do about it.</description>
-    </item>
-    <item>
       <title>CVE-2026-26128 — Kerberos Reflection Bypass: Detection &amp; Mitigation</title>
       <link>http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
