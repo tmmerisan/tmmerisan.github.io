@@ -6,8 +6,36 @@
     <description>Recent content in PowerShell on Tony&#39;s Tech Notes</description>
     <generator>Hugo</generator>
     <language>es-es</language>
-    <lastBuildDate>Sat, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AnyDesk Abused for Ransomware Persistence — Detection &amp; Mitigation</title>
+      <link>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</guid>
+      <description>32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&amp;#39;s how the attack works, how to detect it, and how to block it for free via Intune.</description>
+    </item>
+    <item>
+      <title>Stale Accounts &amp; Old Passwords in Active Directory — Audit &amp; Remediation</title>
+      <link>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</guid>
+      <description>Enabled accounts with passwords unchanged for years are one of the most common and exploited weaknesses in Active Directory. Here&amp;#39;s how to find them and what to do about it.</description>
+    </item>
+    <item>
+      <title>CVE-2026-26128 — Kerberos Reflection Bypass: Detection &amp; Mitigation</title>
+      <link>http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/</guid>
+      <description>CVE-2026-26128 is a Kerberos authentication reflection bypass discovered by Synacktiv that yields SYSTEM on most Windows builds. Patched in March 2026 Patch Tuesday.</description>
+    </item>
+    <item>
+      <title>NTLM Coercion in Active Directory — Detection &amp; Mitigation</title>
+      <link>http://localhost:1313/posts/kb-005-ntlm-coercion-detection-mitigation/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-005-ntlm-coercion-detection-mitigation/</guid>
+      <description>What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments.</description>
+    </item>
     <item>
       <title>Onelogon — Netlogon Vulnerable Channel Bypass</title>
       <link>http://localhost:1313/posts/kb-004-onelogon-netlogon-vulnerable-channel-bypass/</link>

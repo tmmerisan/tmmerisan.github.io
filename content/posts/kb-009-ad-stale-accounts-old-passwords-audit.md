@@ -1,6 +1,6 @@
 ---
 title: "Stale Accounts & Old Passwords in Active Directory — Audit & Remediation"
-date: 2026-07-15
+date: 2026-07-15T23:00:00
 draft: false
 tags: ["Active Directory", "Identity", "Security", "PowerShell", "IAM"]
 description: "Enabled accounts with passwords unchanged for years are one of the most common and exploited weaknesses in Active Directory. Here's how to find them and what to do about it."

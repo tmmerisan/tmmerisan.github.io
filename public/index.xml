@@ -6,8 +6,29 @@
     <description>Recent content on Tony&#39;s Tech Notes</description>
     <generator>Hugo</generator>
     <language>es-es</language>
-    <lastBuildDate>Mon, 06 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AnyDesk Abused for Ransomware Persistence — Detection &amp; Mitigation</title>
+      <link>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</guid>
+      <description>32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&amp;#39;s how the attack works, how to detect it, and how to block it for free via Intune.</description>
+    </item>
+    <item>
+      <title>Microsoft Entra: Passkeys by Default &amp; SMS/Voice Retirement — Admin Advisory</title>
+      <link>http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</guid>
+      <description>Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here&amp;#39;s what it is, why it&amp;#39;s happening, and what admins need to do before February 1, 2027.</description>
+    </item>
+    <item>
+      <title>Stale Accounts &amp; Old Passwords in Active Directory — Audit &amp; Remediation</title>
+      <link>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kb-009-ad-stale-accounts-old-passwords-audit/</guid>
+      <description>Enabled accounts with passwords unchanged for years are one of the most common and exploited weaknesses in Active Directory. Here&amp;#39;s how to find them and what to do about it.</description>
+    </item>
     <item>
       <title>CVE-2026-26128 — Kerberos Reflection Bypass: Detection &amp; Mitigation</title>
       <link>http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/</link>
