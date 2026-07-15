@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Detection on Tony&#39;s Tech Notes</title>
-    <link>http://localhost:1313/tags/detection/</link>
+    <link>https://tonymerisan.com/tags/detection/</link>
     <description>Recent content in Detection on Tony&#39;s Tech Notes</description>
     <generator>Hugo</generator>
     <language>es-es</language>
     <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/detection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tonymerisan.com/tags/detection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AnyDesk Abused for Ransomware Persistence — Detection &amp; Mitigation</title>
-      <link>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</link>
+      <link>https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</guid>
+      <guid>https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/</guid>
       <description>32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&amp;#39;s how the attack works, how to detect it, and how to block it for free via Intune.</description>
     </item>
   </channel>

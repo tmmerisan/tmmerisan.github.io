@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Microsoft Entra: Passkeys by Default &amp; SMS/Voice Retirement — Admin Advisory | Tony&#39;s Tech Notes</title>
 <meta name="keywords" content="Microsoft Entra, Passkeys, MFA, Identity, IAM, Modern Workplace">
 <meta name="description" content="Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here&#39;s what it is, why it&#39;s happening, and what admins need to do before February 1, 2027.">
 <meta name="author" content="Tony Merisan">
-<link rel="canonical" href="http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
+<link rel="canonical" href="https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://tonymerisan.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tonymerisan.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tonymerisan.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tonymerisan.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tonymerisan.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
+<link rel="alternate" hreflang="en" href="https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,13 +64,86 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
+  <meta property="og:site_name" content="Tony&#39;s Tech Notes">
+  <meta property="og:title" content="Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory">
+  <meta property="og:description" content="Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here&#39;s what it is, why it&#39;s happening, and what admins need to do before February 1, 2027.">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:tag" content="Microsoft Entra">
+    <meta property="article:tag" content="Passkeys">
+    <meta property="article:tag" content="MFA">
+    <meta property="article:tag" content="Identity">
+    <meta property="article:tag" content="IAM">
+    <meta property="article:tag" content="Modern Workplace">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory">
+  <meta name="twitter:description" content="Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here&#39;s what it is, why it&#39;s happening, and what admins need to do before February 1, 2027.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tonymerisan.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Microsoft Entra: Passkeys by Default \u0026 SMS/Voice Retirement — Admin Advisory",
+      "item": "https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Microsoft Entra: Passkeys by Default \u0026 SMS/Voice Retirement — Admin Advisory",
+  "name": "Microsoft Entra: Passkeys by Default \u0026 SMS\/Voice Retirement — Admin Advisory",
+  "description": "Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here's what it is, why it's happening, and what admins need to do before February 1, 2027.",
+  "keywords": [
+    "Microsoft Entra", "Passkeys", "MFA", "Identity", "IAM", "Modern Workplace"
+  ],
+  "articleBody": "TL;DR September 1, 2026 — Passkeys become default. Users enabled for SMS/Voice are auto-enabled for passkeys and prompted to register. February 1, 2027 — Microsoft-provided SMS and Voice MFA fully retired. No opt-out. Users with no other MFA method will be blocked until they register a passkey. Action required now — Audit who in your tenant uses SMS/Voice and start migrating them to passkeys. 1. What Are Passkeys? Passkeys are phishing-resistant, passwordless credentials that replace both passwords and weak MFA methods like SMS OTP. Instead of a shared secret, they use a cryptographic key pair:\nThe private key lives on the user’s device (never leaves it). The public key is registered with the service (Microsoft Entra). Authentication is proven via biometric or device PIN — no password, no SMS code. They are resistant to phishing, SIM-swap attacks, and credential replay. Microsoft Entra ID supports two types:\nType How it works Best for Synced passkey Stored in a platform credential manager (iCloud Keychain, Google Password Manager) and synced across devices Users already using a platform credential manager Device-bound passkey Tied to a specific device — Microsoft Authenticator, FIDO2 hardware key, Windows Hello High-security environments, shared device scenarios Passkeys are included in all Microsoft Entra plans at no additional cost.\n2. Why Is Microsoft Doing This? SMS and voice OTP are among the weakest MFA methods available. They are vulnerable to:\nSIM-swap attacks — attacker takes over your phone number via the carrier. Real-time phishing — attacker tricks the user into entering the OTP on a fake site. SS7 protocol attacks — interception at the telecom network level. Microsoft’s position is clear: as organizations move toward AI-driven workflows, phishing-resistant authentication is no longer optional. Passkeys are the industry direction — Apple, Google, and Microsoft have all committed to the FIDO2/WebAuthn standard.\n3. Retirement Timeline Date What happens What you should do September 1, 2026 Passkeys auto-enabled for SMS/Voice users. Registration Campaign set to Microsoft Managed. Users prompted to register a passkey at next MFA sign-in (skippable). Notify end users. Start passkey deployment. September 18, 2026 Telecom providers available in Microsoft Security Store for review. Evaluate providers if SMS/Voice is required for compliance. October 30, 2026 Customers can select and configure a telecom provider from the Security Store. Configure provider if needed for regulated scenarios. February 1, 2027 Microsoft-provided SMS/Voice fully retired. Users with no other MFA method hit a blocking passkey registration prompt. No opt-out. All users must be on a phishing-resistant method by this date. 4. Action Plan for Admins Step 1 — Audit who uses SMS or Voice Run the Microsoft-provided PowerShell script to identify affected users:\n# Requires Global Reader, Authentication Policy Administrator, or Security Reader # Script: https://github.com/microsoft/entra-sms-voice-usage-analyzer Any non-zero result means your tenant is in scope and needs action.\nStep 2 — Enable Passkeys in your tenant In the Microsoft Entra admin center:\nGo to Protection \u003e Authentication methods \u003e Policies. Enable Passkey (FIDO2). Target the security group of SMS/Voice users identified in Step 1. Step 3 — Configure a Registration Campaign Drive adoption proactively before September 1:\nGo to Protection \u003e Authentication methods \u003e Registration campaign. Set State to Microsoft Managed. Target your SMS/Voice user group. Users will be prompted to register a passkey at their next MFA sign-in.\nStep 4 — Communicate to end users A smooth rollout depends on communication, not just technical config. Microsoft recommends a phased approach:\nAwareness — SMS/Voice is retiring, here’s what’s changing and why. Action — how to register a passkey on their device (Windows Hello, iOS, Android). Reminder — follow-up for users who haven’t registered yet. Use Microsoft’s end-user communication templates.\nStep 5 — Handle exceptions (regulated environments) If your organization has a genuine regulatory or operational need to keep SMS/Voice:\nStarting October 30, 2026, configure a customer-managed telecom provider via the Microsoft Security Store. Document the business reason (which regulation, which scenario). Costs are per-message and vary by provider and region — evaluate before committing. Default all other users to passkeys. Step 6 — Verify before February 1, 2027 Re-run the audit from Step 1 to confirm no users remain on SMS/Voice only. If any do, they will hit a blocking registration prompt on February 1 — there is no opt-out for this enforcement.\n5. Key Points to Remember Users already on passkeys, Windows Hello for Business, or FIDO2 keys are unaffected. SSPR (Self-Service Password Reset) is also affected — SMS/Voice retirement applies across all Entra authentication scenarios. A temporary opt-out for the September 1 changes will be available from August 1, 2026 — but the February 1, 2027 enforcement has no opt-out. This timeline applies to public cloud only. Other cloud environments (GCC, GCC-H, etc.) will follow on a later schedule. 6. References Microsoft Docs — Passkeys by default and SMS/Voice retirement Plan a passkey deployment in Microsoft Entra ID Enable passkeys (FIDO2) for your organization SMS/Voice usage analyzer script End-user communication templates ",
+  "wordCount" : "817",
+  "inLanguage": "en",
+  "datePublished": "2026-07-15T00:00:00Z",
+  "dateModified": "2026-07-15T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Tony Merisan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tony's Tech Notes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tonymerisan.com/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
+            <a href="https://tonymerisan.com/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -268,21 +341,21 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/microsoft-entra/">Microsoft Entra</a></li>
-      <li><a href="http://localhost:1313/tags/passkeys/">Passkeys</a></li>
-      <li><a href="http://localhost:1313/tags/mfa/">MFA</a></li>
-      <li><a href="http://localhost:1313/tags/identity/">Identity</a></li>
-      <li><a href="http://localhost:1313/tags/iam/">IAM</a></li>
-      <li><a href="http://localhost:1313/tags/modern-workplace/">Modern Workplace</a></li>
+      <li><a href="https://tonymerisan.com/tags/microsoft-entra/">Microsoft Entra</a></li>
+      <li><a href="https://tonymerisan.com/tags/passkeys/">Passkeys</a></li>
+      <li><a href="https://tonymerisan.com/tags/mfa/">MFA</a></li>
+      <li><a href="https://tonymerisan.com/tags/identity/">Identity</a></li>
+      <li><a href="https://tonymerisan.com/tags/iam/">IAM</a></li>
+      <li><a href="https://tonymerisan.com/tags/modern-workplace/">Modern Workplace</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
+  <a class="prev" href="https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
     <span class="title">« Prev</span>
     <span>AnyDesk Abused for Ransomware Persistence — Detection &amp; Mitigation</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/">
+  <a class="next" href="https://tonymerisan.com/posts/kb-009-ad-stale-accounts-old-passwords-audit/">
     <span class="title">Next »</span>
-    <span>CVE-2026-26128 — Kerberos Reflection Bypass: Detection &amp; Mitigation</span>
+    <span>Stale Accounts and Old Passwords in Active Directory - Audit and Remediation</span>
   </a>
 </nav>
 
@@ -291,7 +364,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Tony&#39;s Tech Notes</a></span> · 
+        <span>&copy; 2026 <a href="https://tonymerisan.com/">Tony&#39;s Tech Notes</a></span> · 
 
     
     

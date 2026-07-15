@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>NTLM Coercion in Active Directory — Detection &amp; Mitigation | Tony&#39;s Tech Notes</title>
 <meta name="keywords" content="Active Directory, NTLM, Security, Windows Server 2025, PowerShell">
 <meta name="description" content="What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments.">
 <meta name="author" content="Tony Merisan">
-<link rel="canonical" href="http://localhost:1313/posts/kb-005-ntlm-coercion-detection-mitigation/">
+<link rel="canonical" href="https://tonymerisan.com/posts/kb-005-ntlm-coercion-detection-mitigation/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://tonymerisan.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tonymerisan.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tonymerisan.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tonymerisan.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tonymerisan.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kb-005-ntlm-coercion-detection-mitigation/">
+<link rel="alternate" hreflang="en" href="https://tonymerisan.com/posts/kb-005-ntlm-coercion-detection-mitigation/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,13 +64,85 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://tonymerisan.com/posts/kb-005-ntlm-coercion-detection-mitigation/">
+  <meta property="og:site_name" content="Tony&#39;s Tech Notes">
+  <meta property="og:title" content="NTLM Coercion in Active Directory — Detection & Mitigation">
+  <meta property="og:description" content="What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments.">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-06T00:00:00+00:00">
+    <meta property="article:tag" content="Active Directory">
+    <meta property="article:tag" content="NTLM">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Windows Server 2025">
+    <meta property="article:tag" content="PowerShell">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NTLM Coercion in Active Directory — Detection & Mitigation">
+  <meta name="twitter:description" content="What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tonymerisan.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "NTLM Coercion in Active Directory — Detection \u0026 Mitigation",
+      "item": "https://tonymerisan.com/posts/kb-005-ntlm-coercion-detection-mitigation/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NTLM Coercion in Active Directory — Detection \u0026 Mitigation",
+  "name": "NTLM Coercion in Active Directory — Detection \u0026 Mitigation",
+  "description": "What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments.",
+  "keywords": [
+    "Active Directory", "NTLM", "Security", "Windows Server 2025", "PowerShell"
+  ],
+  "articleBody": "1. What is NTLM Coercion? NTLM coercion is an attack technique where an adversary with network access forces a Windows machine — typically a Domain Controller — to authenticate against an attacker-controlled host. That authentication travels in NTLM format and can be captured and relayed (NTLM relay) to access other domain resources, or cracked offline.\nThe classic scenario:\nThe attacker runs a coercion tool (Coercer, PetitPotam, PrinterBug) against a DC. The DC automatically attempts to authenticate against the attacker’s IP. The attacker captures the NTLMv2 hash and relays or cracks it. Depending on privileges, this can lead to full domain compromise. 2. Common Coercion Vectors Vector Protocol Notes Print Spooler (MS-RPRN) RPC / SMB Most historically exploited EFS (MS-EFSRPC) RPC Requires EFS to be active DFS (MS-DFSNM) RPC / SMB Common on DCs with DFS enabled WebClient (WebDAV) HTTP Requires the service to be running 3. What Changed in Windows Server 2025 Windows Server 2025 (and Server 2022 23H2 onwards) introduced significant changes that reduce the default attack surface:\nPrint Spooler over named pipes (SMB) is disabled by default — the most historically exploited path no longer works in out-of-the-box configurations. EFS behaves like WebClient — the service exists but must be active to be exploitable. Not enabled by default. DFS is common on DCs but not enabled by default — if DFS is not in use, this vector does not apply. This means tools like Coercer have limited success against Server 2025 in standard configurations. However, environments with legacy services enabled or non-hardened configurations remain vulnerable.\n4. Detection 4.1 Check Print Spooler status on all DCs Get-Service -Name Spooler -ComputerName (Get-ADDomainController -Filter *).HostName | Select-Object MachineName, Status, StartType The Print Spooler should not be running on any Domain Controller. If Running appears, it is an immediate risk.\n4.2 Check EFS status Get-Service -Name EFS -ComputerName (Get-ADDomainController -Filter *).HostName | Select-Object MachineName, Status, StartType 4.3 Event Log correlation Look for unusual outbound NTLM authentications from DCs:\nGet-WinEvent -LogName Security -ComputerName | Where-Object { $_.Id -eq 4648 } | Select-Object TimeCreated, Message -First 50 Event ID 4648 — Logon attempt using explicit credentials. An unexpected outbound authentication from a DC to an unknown or external IP is a sign of active coercion.\n5. Mitigation Disable Print Spooler on all DCs — if direct printing from the DC is not required, disabling it eliminates the most exploited vector.\nGet-ADDomainController -Filter * | ForEach-Object { Invoke-Command -ComputerName $_.HostName -ScriptBlock { Stop-Service -Name Spooler -Force Set-Service -Name Spooler -StartupType Disabled } } Enable EPA (Extended Protection for Authentication) — makes it significantly harder to relay captured NTLM credentials. Enforce SMB Signing — prevents a captured hash from being relayed against SMB services. Disable NTLM where possible — favor Kerberos across the environment. Monitor changes to high-risk services — alert if Print Spooler or EFS are activated on a DC unexpectedly. 6. References Microsoft Security Advisory — Print Spooler hardening Microsoft Docs — Extended Protection for Authentication (EPA) Coercer — audit tool (authorized lab use only) Rubeus — Kerberos/NTLM audit tool ",
+  "wordCount" : "507",
+  "inLanguage": "en",
+  "datePublished": "2026-07-06T00:00:00Z",
+  "dateModified": "2026-07-06T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Tony Merisan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonymerisan.com/posts/kb-005-ntlm-coercion-detection-mitigation/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tony's Tech Notes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tonymerisan.com/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
+            <a href="https://tonymerisan.com/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -216,18 +288,18 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/active-directory/">Active Directory</a></li>
-      <li><a href="http://localhost:1313/tags/ntlm/">NTLM</a></li>
-      <li><a href="http://localhost:1313/tags/security/">Security</a></li>
-      <li><a href="http://localhost:1313/tags/windows-server-2025/">Windows Server 2025</a></li>
-      <li><a href="http://localhost:1313/tags/powershell/">PowerShell</a></li>
+      <li><a href="https://tonymerisan.com/tags/active-directory/">Active Directory</a></li>
+      <li><a href="https://tonymerisan.com/tags/ntlm/">NTLM</a></li>
+      <li><a href="https://tonymerisan.com/tags/security/">Security</a></li>
+      <li><a href="https://tonymerisan.com/tags/windows-server-2025/">Windows Server 2025</a></li>
+      <li><a href="https://tonymerisan.com/tags/powershell/">PowerShell</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/">
+  <a class="prev" href="https://tonymerisan.com/posts/kb-006-cve-2026-26128-kerberos-reflection-bypass/">
     <span class="title">« Prev</span>
     <span>CVE-2026-26128 — Kerberos Reflection Bypass: Detection &amp; Mitigation</span>
   </a>
-  <a class="next" href="http://localhost:1313/posts/kb-004-onelogon-netlogon-vulnerable-channel-bypass/">
+  <a class="next" href="https://tonymerisan.com/posts/kb-004-onelogon-netlogon-vulnerable-channel-bypass/">
     <span class="title">Next »</span>
     <span>Onelogon — Netlogon Vulnerable Channel Bypass</span>
   </a>
@@ -238,7 +310,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Tony&#39;s Tech Notes</a></span> · 
+        <span>&copy; 2026 <a href="https://tonymerisan.com/">Tony&#39;s Tech Notes</a></span> · 
 
     
     

@@ -2,185 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Tony&#39;s Tech Notes</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://tonymerisan.com/tags/</link>
     <description>Recent content in Tags on Tony&#39;s Tech Notes</description>
     <generator>Hugo</generator>
     <language>es-es</language>
     <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tonymerisan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Active Directory</title>
+      <link>https://tonymerisan.com/tags/active-directory/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://tonymerisan.com/tags/active-directory/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AnyDesk</title>
-      <link>http://localhost:1313/tags/anydesk/</link>
+      <link>https://tonymerisan.com/tags/anydesk/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/anydesk/</guid>
+      <guid>https://tonymerisan.com/tags/anydesk/</guid>
       <description></description>
     </item>
     <item>
       <title>Detection</title>
-      <link>http://localhost:1313/tags/detection/</link>
+      <link>https://tonymerisan.com/tags/detection/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/detection/</guid>
+      <guid>https://tonymerisan.com/tags/detection/</guid>
       <description></description>
     </item>
     <item>
       <title>IAM</title>
-      <link>http://localhost:1313/tags/iam/</link>
+      <link>https://tonymerisan.com/tags/iam/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/iam/</guid>
+      <guid>https://tonymerisan.com/tags/iam/</guid>
       <description></description>
     </item>
     <item>
       <title>Identity</title>
-      <link>http://localhost:1313/tags/identity/</link>
+      <link>https://tonymerisan.com/tags/identity/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/identity/</guid>
+      <guid>https://tonymerisan.com/tags/identity/</guid>
       <description></description>
     </item>
     <item>
       <title>Intune</title>
-      <link>http://localhost:1313/tags/intune/</link>
+      <link>https://tonymerisan.com/tags/intune/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/intune/</guid>
+      <guid>https://tonymerisan.com/tags/intune/</guid>
       <description></description>
     </item>
     <item>
       <title>MFA</title>
-      <link>http://localhost:1313/tags/mfa/</link>
+      <link>https://tonymerisan.com/tags/mfa/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/mfa/</guid>
+      <guid>https://tonymerisan.com/tags/mfa/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Entra</title>
-      <link>http://localhost:1313/tags/microsoft-entra/</link>
+      <link>https://tonymerisan.com/tags/microsoft-entra/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/microsoft-entra/</guid>
+      <guid>https://tonymerisan.com/tags/microsoft-entra/</guid>
       <description></description>
     </item>
     <item>
       <title>Modern Workplace</title>
-      <link>http://localhost:1313/tags/modern-workplace/</link>
+      <link>https://tonymerisan.com/tags/modern-workplace/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/modern-workplace/</guid>
+      <guid>https://tonymerisan.com/tags/modern-workplace/</guid>
       <description></description>
     </item>
     <item>
       <title>Passkeys</title>
-      <link>http://localhost:1313/tags/passkeys/</link>
+      <link>https://tonymerisan.com/tags/passkeys/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/passkeys/</guid>
+      <guid>https://tonymerisan.com/tags/passkeys/</guid>
       <description></description>
     </item>
     <item>
       <title>PowerShell</title>
-      <link>http://localhost:1313/tags/powershell/</link>
+      <link>https://tonymerisan.com/tags/powershell/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powershell/</guid>
+      <guid>https://tonymerisan.com/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
       <title>Ransomware</title>
-      <link>http://localhost:1313/tags/ransomware/</link>
+      <link>https://tonymerisan.com/tags/ransomware/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ransomware/</guid>
+      <guid>https://tonymerisan.com/tags/ransomware/</guid>
       <description></description>
     </item>
     <item>
       <title>RMM Abuse</title>
-      <link>http://localhost:1313/tags/rmm-abuse/</link>
+      <link>https://tonymerisan.com/tags/rmm-abuse/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rmm-abuse/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sigma</title>
-      <link>http://localhost:1313/tags/sigma/</link>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sigma/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Active Directory</title>
-      <link>http://localhost:1313/tags/active-directory/</link>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/active-directory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CVE-2026-26128</title>
-      <link>http://localhost:1313/tags/cve-2026-26128/</link>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve-2026-26128/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kerberos</title>
-      <link>http://localhost:1313/tags/kerberos/</link>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/kerberos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>NTLM</title>
-      <link>http://localhost:1313/tags/ntlm/</link>
-      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ntlm/</guid>
+      <guid>https://tonymerisan.com/tags/rmm-abuse/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>https://tonymerisan.com/tags/security/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://tonymerisan.com/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sigma</title>
+      <link>https://tonymerisan.com/tags/sigma/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://tonymerisan.com/tags/sigma/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CVE-2026-26128</title>
+      <link>https://tonymerisan.com/tags/cve-2026-26128/</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>https://tonymerisan.com/tags/cve-2026-26128/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kerberos</title>
+      <link>https://tonymerisan.com/tags/kerberos/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://tonymerisan.com/tags/kerberos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NTLM</title>
+      <link>https://tonymerisan.com/tags/ntlm/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://tonymerisan.com/tags/ntlm/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>http://localhost:1313/tags/windows/</link>
+      <link>https://tonymerisan.com/tags/windows/</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/windows/</guid>
+      <guid>https://tonymerisan.com/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows Server 2025</title>
-      <link>http://localhost:1313/tags/windows-server-2025/</link>
+      <link>https://tonymerisan.com/tags/windows-server-2025/</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/windows-server-2025/</guid>
+      <guid>https://tonymerisan.com/tags/windows-server-2025/</guid>
       <description></description>
     </item>
     <item>
       <title>CVE-2020-1472</title>
-      <link>http://localhost:1313/tags/cve-2020-1472/</link>
+      <link>https://tonymerisan.com/tags/cve-2020-1472/</link>
       <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cve-2020-1472/</guid>
+      <guid>https://tonymerisan.com/tags/cve-2020-1472/</guid>
       <description></description>
     </item>
     <item>
       <title>Zerologon</title>
-      <link>http://localhost:1313/tags/zerologon/</link>
+      <link>https://tonymerisan.com/tags/zerologon/</link>
       <pubDate>Sat, 04 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/zerologon/</guid>
+      <guid>https://tonymerisan.com/tags/zerologon/</guid>
       <description></description>
     </item>
     <item>
       <title>FortiClient</title>
-      <link>http://localhost:1313/tags/forticlient/</link>
+      <link>https://tonymerisan.com/tags/forticlient/</link>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/forticlient/</guid>
+      <guid>https://tonymerisan.com/tags/forticlient/</guid>
       <description></description>
     </item>
     <item>
       <title>Troubleshooting</title>
-      <link>http://localhost:1313/tags/troubleshooting/</link>
+      <link>https://tonymerisan.com/tags/troubleshooting/</link>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/troubleshooting/</guid>
+      <guid>https://tonymerisan.com/tags/troubleshooting/</guid>
       <description></description>
     </item>
     <item>
       <title>VPN</title>
-      <link>http://localhost:1313/tags/vpn/</link>
+      <link>https://tonymerisan.com/tags/vpn/</link>
       <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vpn/</guid>
+      <guid>https://tonymerisan.com/tags/vpn/</guid>
       <description></description>
     </item>
   </channel>

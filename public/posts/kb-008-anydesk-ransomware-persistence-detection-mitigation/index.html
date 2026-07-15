@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>AnyDesk Abused for Ransomware Persistence — Detection &amp; Mitigation | Tony&#39;s Tech Notes</title>
 <meta name="keywords" content="Ransomware, AnyDesk, RMM Abuse, Detection, Intune, PowerShell, Sigma">
 <meta name="description" content="32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&#39;s how the attack works, how to detect it, and how to block it for free via Intune.">
 <meta name="author" content="Tony Merisan">
-<link rel="canonical" href="http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
+<link rel="canonical" href="https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://tonymerisan.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tonymerisan.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tonymerisan.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tonymerisan.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tonymerisan.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
+<link rel="alternate" hreflang="en" href="https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
 <noscript>
     <style>
         #theme-toggle,
@@ -64,13 +64,86 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/">
+  <meta property="og:site_name" content="Tony&#39;s Tech Notes">
+  <meta property="og:title" content="AnyDesk Abused for Ransomware Persistence — Detection & Mitigation">
+  <meta property="og:description" content="32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&#39;s how the attack works, how to detect it, and how to block it for free via Intune.">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:tag" content="Ransomware">
+    <meta property="article:tag" content="AnyDesk">
+    <meta property="article:tag" content="RMM Abuse">
+    <meta property="article:tag" content="Detection">
+    <meta property="article:tag" content="Intune">
+    <meta property="article:tag" content="PowerShell">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AnyDesk Abused for Ransomware Persistence — Detection & Mitigation">
+  <meta name="twitter:description" content="32 ransomware groups use AnyDesk for persistence via a single CLI command. Here&#39;s how the attack works, how to detect it, and how to block it for free via Intune.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tonymerisan.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "AnyDesk Abused for Ransomware Persistence — Detection \u0026 Mitigation",
+      "item": "https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AnyDesk Abused for Ransomware Persistence — Detection \u0026 Mitigation",
+  "name": "AnyDesk Abused for Ransomware Persistence — Detection \u0026 Mitigation",
+  "description": "32 ransomware groups use AnyDesk for persistence via a single CLI command. Here's how the attack works, how to detect it, and how to block it for free via Intune.",
+  "keywords": [
+    "Ransomware", "AnyDesk", "RMM Abuse", "Detection", "Intune", "PowerShell", "Sigma"
+  ],
+  "articleBody": "1. The Problem — RMM Tools as Ransomware Infrastructure Remote Monitoring and Management (RMM) tools like AnyDesk are legitimate software used by IT teams worldwide. That legitimacy is exactly why ransomware groups abuse them — they blend into normal enterprise traffic and are often missed by security controls focused on known malware signatures.\nAccording to the Ransomware Tool Matrix, 32 ransomware groups use AnyDesk for persistence — making it the most abused tool in the RMM category. The technique is simple, reliable, and requires no custom malware.\n2. How the Attack Works The attacker establishes persistence with a single piped command:\necho Admin#123 | AnyDesk.exe --set-password This sets a known password on AnyDesk, giving the attacker permanent remote access to the compromised machine. Two details make this particularly interesting from a defensive perspective:\nThe password appears in plaintext in the command line — visible in process creation logs if you’re collecting them. --set-password survives executable renaming — attackers sometimes rename AnyDesk.exe to evade detection by filename, but the flag still works regardless of what the binary is called. The attacker can then connect to the machine at any time using AnyDesk’s infrastructure, even after the initial intrusion vector is closed.\n3. Detection 3.1 Hunt for the command line pattern The most reliable detection is process creation logging (Event ID 4688 with command line auditing enabled, or via EDR).\nHunt for:\nThe --set-password flag in any process command line An echo pipe combined with AnyDesk.exe (or any renamed variant) # Search Windows Security event log for --set-password flag Get-WinEvent -LogName Security | Where-Object { $_.Id -eq 4688 -and $_.Message -match \"--set-password\" } | Select-Object TimeCreated, Message Note: Event ID 4688 command line logging must be enabled via Group Policy or Intune for this to work: Computer Configuration \u003e Administrative Templates \u003e System \u003e Audit Process Creation \u003e Include command line in process creation events\n3.2 Sigma Rule The community Sigma rule “AnyDesk Piped Password Via CLI” covers this technique. If you have a SIEM (Microsoft Sentinel, Splunk, Elastic), import and enable this rule. It detects:\nProcess name matching AnyDesk.exe or renamed variants via --set-password The echo pipe pattern in the command line Search for it in the SigmaHQ repository under windows/process_creation.\n3.3 Key indicators to hunt Indicator What it means --set-password in any command line AnyDesk password being set — investigate immediately echo | AnyDesk.exe pattern Classic piped password setup AnyDesk running from unusual paths (%TEMP%, %APPDATA%) Likely attacker-dropped binary AnyDesk running as SYSTEM or under unexpected parent process Lateral movement or privilege escalation 4. Mitigation 4.1 Free mitigation — Deny folder permissions via Intune If AnyDesk is not an authorized tool in your environment, you can block its installation for free by pre-creating its expected folder path and denying write access to users. AnyDesk cannot create the folder if it already exists with deny permissions — so it fails to install.\nThis approach was shared by Nathan McNulty and works without any paid app control solution:\n# Deploy via Intune as a remediation script (run as SYSTEM) # Source: https://github.com/nathanmcnulty/nathanmcnulty/blob/main/Intune/DenyFolderPermissions.ps1 (Get-ChildItem -Path C:\\Users).FullName | Where-Object { $_ -ne \"C:\\Users\\Public\" } | ForEach-Object { $FolderPath = \"$_\\AppData\\Local\\AnyDesk\" try { if (-not (Test-Path -Path $FolderPath)) { New-Item -Path $FolderPath -ItemType Directory -ErrorAction Stop | Out-Null } $acl = Get-Acl -Path $FolderPath $usersGroup = New-Object System.Security.Principal.NTAccount(\"Users\") $accessRule = New-Object System.Security.AccessControl.FileSystemAccessRule( $usersGroup, \"FullControl\", \"ContainerInherit,ObjectInherit\", \"None\", \"Deny\" ) $acl.SetAccessRule($accessRule) Set-Acl -Path $FolderPath -AclObject $acl -ErrorAction Stop } catch { Write-Error \"Failed to create folder or set permissions. Error: $_\" } } Deploy via Intune:\nGo to Intune admin center \u003e Devices \u003e Scripts and remediations Create a new remediation script Paste the script above as the detection/remediation script Run as SYSTEM, 64-bit PowerShell Target your device groups 4.2 Additional mitigations Application control (WDAC / AppLocker) — block unauthorized executables by publisher or hash. More robust than folder deny but requires more setup. Enable process creation command line auditing — essential for detecting this and many other techniques. Block AnyDesk domains at firewall/proxy level if not an authorized tool: relay.anydesk.com, *.anydesk.com Allowlist authorized RMM tools and alert on any other RMM binary executing in the environment. 5. Key Takeaways RMM abuse is one of the most common ransomware persistence techniques — not exotic malware, but legitimate tools turned against you. The AnyDesk --set-password technique is trivially simple but leaves a clear forensic trail in process creation logs if you are collecting them. The folder deny approach is free, low-risk, and deployable via Intune in minutes — a good quick win while a proper app control policy is being built. 6. References Ransomware Tool Matrix SigmaHQ — AnyDesk Piped Password Via CLI Nathan McNulty — DenyFolderPermissions.ps1 Microsoft Docs — Audit Process Creation ",
+  "wordCount" : "785",
+  "inLanguage": "en",
+  "datePublished": "2026-07-15T00:00:00Z",
+  "dateModified": "2026-07-15T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Tony Merisan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tonymerisan.com/posts/kb-008-anydesk-ransomware-persistence-detection-mitigation/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tony's Tech Notes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tonymerisan.com/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
+            <a href="https://tonymerisan.com/" accesskey="h" title="Tony&#39;s Tech Notes (Alt + H)">Tony&#39;s Tech Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -259,16 +332,16 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/ransomware/">Ransomware</a></li>
-      <li><a href="http://localhost:1313/tags/anydesk/">AnyDesk</a></li>
-      <li><a href="http://localhost:1313/tags/rmm-abuse/">RMM Abuse</a></li>
-      <li><a href="http://localhost:1313/tags/detection/">Detection</a></li>
-      <li><a href="http://localhost:1313/tags/intune/">Intune</a></li>
-      <li><a href="http://localhost:1313/tags/powershell/">PowerShell</a></li>
-      <li><a href="http://localhost:1313/tags/sigma/">Sigma</a></li>
+      <li><a href="https://tonymerisan.com/tags/ransomware/">Ransomware</a></li>
+      <li><a href="https://tonymerisan.com/tags/anydesk/">AnyDesk</a></li>
+      <li><a href="https://tonymerisan.com/tags/rmm-abuse/">RMM Abuse</a></li>
+      <li><a href="https://tonymerisan.com/tags/detection/">Detection</a></li>
+      <li><a href="https://tonymerisan.com/tags/intune/">Intune</a></li>
+      <li><a href="https://tonymerisan.com/tags/powershell/">PowerShell</a></li>
+      <li><a href="https://tonymerisan.com/tags/sigma/">Sigma</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
+  <a class="next" href="https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/">
     <span class="title">Next »</span>
     <span>Microsoft Entra: Passkeys by Default &amp; SMS/Voice Retirement — Admin Advisory</span>
   </a>
@@ -279,7 +352,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Tony&#39;s Tech Notes</a></span> · 
+        <span>&copy; 2026 <a href="https://tonymerisan.com/">Tony&#39;s Tech Notes</a></span> · 
 
     
     

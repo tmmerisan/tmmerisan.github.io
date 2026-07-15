@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Microsoft Entra on Tony&#39;s Tech Notes</title>
-    <link>http://localhost:1313/tags/microsoft-entra/</link>
+    <link>https://tonymerisan.com/tags/microsoft-entra/</link>
     <description>Recent content in Microsoft Entra on Tony&#39;s Tech Notes</description>
     <generator>Hugo</generator>
     <language>es-es</language>
     <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/microsoft-entra/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tonymerisan.com/tags/microsoft-entra/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Microsoft Entra: Passkeys by Default &amp; SMS/Voice Retirement — Admin Advisory</title>
-      <link>http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</link>
+      <link>https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</guid>
+      <guid>https://tonymerisan.com/posts/kb-007-entra-passkeys-default-sms-voice-retirement/</guid>
       <description>Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here&amp;#39;s what it is, why it&amp;#39;s happening, and what admins need to do before February 1, 2027.</description>
     </item>
   </channel>
