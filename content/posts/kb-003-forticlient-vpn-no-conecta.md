@@ -3,6 +3,7 @@ title: "VPN FortiClient no conecta — Troubleshooting"
 date: 2026-05-17
 draft: false
 tags: ["VPN", "FortiClient", "Troubleshooting", "Modern Workplace"]
+categories: ["kb"]
 description: "KB #3 · Síntoma, causas y resolución paso a paso"
 ---
 

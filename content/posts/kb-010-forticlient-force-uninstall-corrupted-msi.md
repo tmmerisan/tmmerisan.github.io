@@ -3,6 +3,7 @@ title: "FortiClient Force Uninstall - Corrupted MSI Recovery"
 date: 2026-07-16
 draft: false
 tags: ["FortiClient", "Troubleshooting", "Windows", "PowerShell", "Modern Workplace"]
+categories: ["kb"]
 description: "How to force uninstall FortiClient when the MSI installer is corrupted or the original package is missing. Step by step from GUID extraction to manual registry cleanup."
 ---
 

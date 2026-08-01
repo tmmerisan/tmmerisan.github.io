@@ -2,8 +2,13 @@ baseURL = "https://tonymerisan.com/"
 languageCode = "es-es"
 title = "Tony's Tech Notes"
 theme = "PaperMod"
+
 [pagination]
   pagerSize = 20
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [params]
   author = "Tony Merisan"
@@ -23,3 +28,18 @@ theme = "PaperMod"
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/tmmerisan"
+
+[[menus.main]]
+  name = "Blog"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "KBs"
+  url = "/categories/kb/"
+  weight = 2
+
+[[menus.main]]
+  name = "Policies"
+  url = "/categories/policy/"
+  weight = 3
