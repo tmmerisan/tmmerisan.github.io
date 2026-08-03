@@ -40,6 +40,16 @@ theme = "PaperMod"
   weight = 2
 
 [[menus.main]]
+  name = "Notes"
+  url = "/categories/note/"
+  weight = 3
+
+[[menus.main]]
   name = "Policies"
   url = "/categories/policy/"
-  weight = 3
+  weight = 4
+
+[[menus.main]]
+  name = "Scripts"
+  url = "/categories/script/"
+  weight = 5
