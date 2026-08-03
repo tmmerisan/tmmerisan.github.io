@@ -1,5 +1,5 @@
 ---
-title: "Onelogon — Netlogon Vulnerable Channel Bypass"
+title: "KB-004 - Onelogon — Netlogon Vulnerable Channel Bypass"
 date: 2026-07-04
 draft: false
 tags: ["Active Directory", "Zerologon", "CVE-2020-1472", "Security", "PowerShell"]

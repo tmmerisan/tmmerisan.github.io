@@ -1,5 +1,5 @@
 ---
-title: "AnyDesk Abused for Ransomware Persistence — Detection & Mitigation"
+title: "KB-008 - AnyDesk Abused for Ransomware Persistence — Detection & Mitigation"
 date: 2026-07-15
 draft: false
 tags: ["Ransomware", "AnyDesk", "RMM Abuse", "Detection", "Intune", "PowerShell", "Sigma"]

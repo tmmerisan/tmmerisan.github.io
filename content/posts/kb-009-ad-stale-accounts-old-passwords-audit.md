@@ -1,5 +1,5 @@
 ---
-title: "Stale Accounts and Old Passwords in Active Directory - Audit and Remediation"
+title: "KB-009 - Stale Accounts and Old Passwords in Active Directory - Audit and Remediation"
 date: 2026-07-16
 draft: false
 tags: ["Active Directory", "Identity", "Security", "PowerShell", "IAM"]

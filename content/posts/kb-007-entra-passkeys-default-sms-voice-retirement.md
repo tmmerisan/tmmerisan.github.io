@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory"
+title: "KB-007 - Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory"
 date: 2026-07-15
 draft: false
 tags: ["Microsoft Entra", "Passkeys", "MFA", "Identity", "IAM", "Modern Workplace"]

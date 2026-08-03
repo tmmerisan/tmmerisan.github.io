@@ -1,5 +1,5 @@
 ---
-title: "FortiClient Force Uninstall - Corrupted MSI Recovery"
+title: "KB-010 - FortiClient Force Uninstall - Corrupted MSI Recovery"
 date: 2026-07-16
 draft: false
 tags: ["FortiClient", "Troubleshooting", "Windows", "PowerShell", "Modern Workplace"]
