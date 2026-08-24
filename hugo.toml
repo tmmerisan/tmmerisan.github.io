@@ -31,7 +31,7 @@ theme = "PaperMod"
 
 [[menus.main]]
   name = "Blog"
-  url = "/"
+  url = "/categories/post/"
   weight = 1
 
 [[menus.main]]

@@ -1,9 +1,9 @@
 ---
-title: "KB-007 - Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory"
+title: "Microsoft Entra: Passkeys by Default & SMS/Voice Retirement — Admin Advisory"
 date: 2026-07-15
 draft: false
 tags: ["Microsoft Entra", "Passkeys", "MFA", "Identity", "IAM", "Modern Workplace"]
-categories: ["kb"]
+categories: ["post"]
 description: "Microsoft Entra is making passkeys the default authentication method and retiring Microsoft-provided SMS and voice MFA. Here's what it is, why it's happening, and what admins need to do before February 1, 2027."
 ---
 

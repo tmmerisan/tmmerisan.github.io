@@ -1,9 +1,9 @@
 ---
-title: "KB-008 - AnyDesk Abused for Ransomware Persistence — Detection & Mitigation"
+title: "AnyDesk Abused for Ransomware Persistence — Detection & Mitigation"
 date: 2026-07-15
 draft: false
 tags: ["Ransomware", "AnyDesk", "RMM Abuse", "Detection", "Intune", "PowerShell", "Sigma"]
-categories: ["kb"]
+categories: ["post"]
 description: "32 ransomware groups use AnyDesk for persistence via a single CLI command. Here's how the attack works, how to detect it, and how to block it for free via Intune."
 ---
 

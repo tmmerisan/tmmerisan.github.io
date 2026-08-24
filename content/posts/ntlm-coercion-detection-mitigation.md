@@ -1,9 +1,9 @@
 ---
-title: "KB-005 - NTLM Coercion in Active Directory — Detection & Mitigation"
+title: "NTLM Coercion in Active Directory — Detection & Mitigation"
 date: 2026-07-06
 draft: false
 tags: ["Active Directory", "NTLM", "Security", "Windows Server 2025", "PowerShell"]
-categories: ["kb"]
+categories: ["post"]
 description: "What NTLM coercion is, what changed in Windows Server 2025, and how to detect and mitigate the risk in Active Directory environments."
 ---
 

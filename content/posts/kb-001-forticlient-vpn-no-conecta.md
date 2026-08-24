@@ -1,5 +1,5 @@
 ---
-title: "KB-003 - VPN FortiClient no conecta — Troubleshooting"
+title: "KB-001 - VPN FortiClient no conecta — Troubleshooting"
 date: 2026-05-17
 draft: false
 tags: ["VPN", "FortiClient", "Troubleshooting", "Modern Workplace"]
